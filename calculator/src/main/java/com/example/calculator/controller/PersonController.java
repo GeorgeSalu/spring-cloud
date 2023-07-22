@@ -40,7 +40,7 @@ public class PersonController {
 		return services.update(person);
 	}
 	
-	@RequestMapping(method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public void delete(@PathVariable("id") String id) {
 		services.delete(id);
 	}
